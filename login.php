@@ -3,7 +3,9 @@
   <head>
     <title>Login</title>
   </head>
+  
   <body>
+    
     <h1>Login form</h1>
 
     <form action="/validate.php" method="post"
