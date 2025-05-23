@@ -1,15 +1,26 @@
 <?php
 
-$valid_username = "utkarsh";
-$valid_password = "password";
+  session_start();
 
-$username = $_REQUEST['username'];
-$password = $_REQUEST['password'];
+  $valid_username = "utkarsh";
+  $valid_password = "password";
 
-if ($valid_username == $username && $valid_password == $password) {
-    echo "Success";
-} else {
-  echo "Fail";
-}
+  $username = $_REQUEST['username'];
+  $_SESSION['username'] = $username;
+  $password = $_REQUEST['password'];
+
+  if ($valid_username == $username && $valid_password == $password) {
+    header('Location: /');
+  } else {
+
+    if (!isset($_SESSION['failed_attempts'])){
+      $_SESSION['failed_attempts'] = 1;
+    } else {
+      $_SESSION['failed_attempts'] = $_SESSION['failed_attempts'] + 1;
+    }
+
+    echo "This is unsuccessful attempt number" . $_SESSION['failed_attempts'];
+  
+  }
 
 ?>
