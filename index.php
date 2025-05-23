@@ -19,4 +19,8 @@ session_start();
     
    
   </body>
+
+  <footer>
+    <p><a href="/logout.php">Click here to logout</a></p>
+  </footer>  
 </html>
