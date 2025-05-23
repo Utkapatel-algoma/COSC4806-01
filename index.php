@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html>
   <head>
-    <title>PHP Test</title>
+    <title>Utkarsh</title>
   </head>
   <body>
-    <?php echo '<p>Hello World</p>'; ?> 
-    <h1> Welcome students</h1>
+    <h1>Assignment 1</h1>
     
+  </body>
 </html>
