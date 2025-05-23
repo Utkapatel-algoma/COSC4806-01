@@ -1,3 +1,18 @@
+<?php
+session_start();
+
+//pushing user to index.php if already authenticated
+if (isset($_SESSION['authenticated']) && $_SESSION['authenticated'] == 1) {
+  header('Location: /');
+  exit(); // stopped script after this step.
+  
+}
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
   <head>

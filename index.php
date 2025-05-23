@@ -3,6 +3,10 @@ session_start();
 
 //Check if user is authenticate
 //if NOT, send them to login.php... header()...
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] != 1) {
+  header('Location: /login.php');
+  exit();// stopped script after this step.
+}
 ?>
 
 
